@@ -2,6 +2,7 @@ import React from "react";
 import "./styles/cart.css";
 
 import Product from "./Product";
+import ProductData from "./Data"
 
 class Cart extends React.Component {
 
@@ -10,10 +11,9 @@ class Cart extends React.Component {
         <div className="page-content">
             <h2>
             	<div class="ui cards">
-	            	<Product productName={"Apple"} price={2} limit={4} />
-					<Product productName={"Banana"} price={1} limit={0} />
-					<Product productName={"Cherry"} price={3} limit={4} />
-					<Product productName={"Durian"} price={4} limit={4} />
+            		{ProductData.products.map(product => (
+				    	<Product productName={product.name} price={product.cost} limit={product.stock} />
+				    ))}
 				</div>
     		</h2>
         </div>
