@@ -14,3 +14,12 @@ If we put onClick={addToCart(counter)}, React would call addToCart(counter) whil
 (a) I used the map feature to map each product in the ProductData to a Product component.
 
 (b) Pulling data from an object allows for more flexibility since I can just update one file and it will update the website. It also means we could pull in external data from another source (like an API) to dynamically update the website with new data.
+
+2.0
+An example would be the clap button on Medium. It would need state to keep track of how many clicks have been registered.
+
+2.1
+We accomplish parent-to-child communication using props. To accomplish child-to-parent communication, we have to use a function passed into the child from the parent through props that updates the parent's state. We can't use the same mechanism because props are only passed one way (from parent to child).
+
+2.2
+Iterate through the list to see if any of the items in the dictionary have a productName that matches the product that was clicked. If one is found, implement the count of that item. If not add a new item to the list with the productName, price, and count of 1 for that product.
